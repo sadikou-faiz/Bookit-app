@@ -1,18 +1,72 @@
 "use client"
 
-import React from 'react'
-import {useKindeBrowserClient} from "@kinde-oss/kinde-auth-nextjs";
-import {LogoutLink} from "@kinde-oss/kinde-auth-nextjs/components";
-
-
+import React, { useEffect, useState } from 'react'
+import { useKindeBrowserClient } from "@kinde-oss/kinde-auth-nextjs";
+import Wrapper from '../components/Wrapper';
 
 const page = () => {
-    const {user} = useKindeBrowserClient()
+  const { user } = useKindeBrowserClient()
+  const [companyId, setCompanyId] = useState<string | null>(null)
+  const [loading, setLoading] = useState(true)
+
+  const fetchCompanyId = async () => {
+    if (user) {
+      try {
+        const response = await fetch('/api/users', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            email: user.email,
+            famillyName: user.family_name,
+            givenName: user.given_name
+          })
+        });
+
+        const data = await response.json()
+        setCompanyId(data.companyId || null)
+        setLoading(false)
+
+      } catch (error) {
+        console.error('erreur', error)
+        setCompanyId(null)
+      }
+    }
+  }
+
+
+  useEffect(() => {
+    const inititializeDate = async () => {
+      await fetchCompanyId()
+    }
+
+    inititializeDate()
+
+  }, [user])
+
+
+  if (loading) {
+    return (
+      <Wrapper>
+        <div className='w-full flex justify-center'>
+          <span className="loading loading-spinner loading-lg"></span>
+        </div>
+      </Wrapper>
+    )
+  }
+
   return (
-   <div>
-     <div>Bienvenu {user?.email}</div>
-     <LogoutLink className='btn'>Log out</LogoutLink>
-   </div>
+    <Wrapper>
+      <div>
+        <div>
+          <div className="badge badge-secondary badge-outline">
+            companyId : {companyId}
+          </div>
+        </div>
+      </div>
+    </Wrapper>
+
   )
 }
 

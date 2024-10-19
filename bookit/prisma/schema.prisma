@@ -9,3 +9,21 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model User {
+  id             String      @id @default(cuid())
+  famillyName    String?  
+  givenName      String?
+  email          String      @unique  
+  companyId      String?
+  company        Company?    @relation("CompanyEmployees" ,fields: [companyId], references: [id])         
+  createdCompanies Company[] @relation("CompanyCreators")
+}
+
+model Company {
+   id             String  @id @default(cuid())
+   name           String  @unique
+   employees      User[]  @relation("CompanyEmployees")
+   createdById    String
+   createdBy      User    @relation("CompanyCreators" , fields: [createdById] , references: [id])
+}
