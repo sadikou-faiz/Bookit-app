@@ -2,7 +2,30 @@ POST http://localhost:3000/api/users
 Content-Type: application/json
 
 {
-    "email" : "dev2@gmail.com",
+    "email" : "dev2d@gmail.com",
     "famillyName" : "dev", 
     "givenName" : "faiz"
+}
+
+###
+
+POST http://localhost:3000/api/companies
+Content-Type: application/json
+
+{
+    "email" : "feedyourback@gmail.com",
+    "companyName" : "saas faizdev"
+}
+
+###
+
+GET http://localhost:3000/api/companies?email=feedyourback@gmail.com
+
+###
+
+DELETE http://localhost:3000/api/companies
+Content-Type: application/json
+
+{
+    "id" : "cm2hkxmfo0002gj73e43p7vb0"
 }

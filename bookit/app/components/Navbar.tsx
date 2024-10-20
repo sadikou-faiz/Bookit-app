@@ -53,12 +53,14 @@ const Navbar = () => {
 
                     <div className=' hidden md:flex items-center space-x-6'>
 
+                        <Link href={'/create-company'} className={`link link-hover font-extrabold ${isActive('/create-company') ? 'text-secondary' : ''} `}>
+                            Vos entreprises
+                        </Link>
+
                         <Link href={'/dashboard'} className={`link link-hover font-extrabold ${isActive('/dashboard') ? 'text-secondary' : ''} `}>
                             Réserver
                         </Link>
-                        <Link href={'/test'} className={`link link-hover font-extrabold ${isActive('/test') ? 'text-secondary' : ''} `}>
-                            test
-                        </Link>
+
 
                     </div>
 
@@ -75,12 +77,13 @@ const Navbar = () => {
 
             {isMenuOpen && (
                 <div className='md:hidden shadow-lg p-4 rounded-lg space-y-4 flex flex-col mt-3'>
+                    <Link href={'/create-company'} className={`link link-hover font-extrabold ${isActive('/create-company') ? 'text-secondary' : ''} `}>
+                        Vos entreprises
+                    </Link>
                     <Link href={'/dashboard'} className={`link link-hover font-extrabold ${isActive('/dashboard') ? 'text-secondary' : ''} `}>
                         Réserver
                     </Link>
-                    <Link href={'/test'} className={`link link-hover font-extrabold ${isActive('/test') ? 'text-secondary' : ''} `}>
-                        test
-                    </Link>
+
                     <LogoutLink className='btn btn-secondary btn-sm  '>Déconnexion</LogoutLink>
                 </div>
             )}
