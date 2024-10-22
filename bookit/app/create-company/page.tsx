@@ -51,6 +51,7 @@ const page = () => {
             }
 
             setNotification('Entreprise créée avec succès !')
+            fetchCompanies()
             setCompanyName('')
 
         } catch (error) {

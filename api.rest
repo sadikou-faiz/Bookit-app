@@ -29,3 +29,18 @@ Content-Type: application/json
 {
     "id" : "cm2hkxmfo0002gj73e43p7vb0"
 }
+
+###
+
+PATCH  http://localhost:3000/api/companies
+Content-Type: application/json
+
+{ "id" : "cm2hmdzkg0003gj73yep94bxx", 
+"creatorEmail" : "feedyourback@gmail.com", 
+"employeeEmail" : "devops@gmail.com", 
+"action" : "DELETE"
+}
+
+###
+
+GET http://localhost:3000/api/employees?companyId=cm2hmdzkg0003gj73yep94bxx
