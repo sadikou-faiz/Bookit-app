@@ -9,12 +9,15 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@edgestore/react": "^0.2.2",
+    "@edgestore/server": "^0.2.2",
     "@kinde-oss/kinde-auth-nextjs": "^2.3.11",
     "@prisma/client": "^5.21.1",
     "lucide-react": "^0.453.0",
     "next": "14.2.15",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "zod": "^3.23.8"
   },
   "devDependencies": {
     "@types/node": "^20",

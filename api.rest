@@ -44,3 +44,46 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/api/employees?companyId=cm2hmdzkg0003gj73yep94bxx
+
+
+###
+
+
+
+POST http://localhost:3000/api/rooms
+Content-Type: application/json
+
+{
+    "action" : "SAVE_DATA",
+    "name" : "room1",
+    "capacity" : 4 ,
+    "description" : "oklm" ,
+    "companyId" : "cm2hmdzkg0003gj73yep94bxx"
+}
+
+###
+
+POST http://localhost:3000/api/rooms
+Content-Type: application/json
+
+{
+    "action" : "SAVE_IMAGE",
+    "imageUrl" : "image.jpg" ,
+    "roomId" : "cm2lzcvl80002sozxn8umzziw"
+}
+
+###
+
+GET http://localhost:3000/api/rooms?companyId=cm2hmdzkg0003gj73yep94bxx
+
+
+###
+
+
+DELETE http://localhost:3000/api/rooms
+Content-Type: application/json
+
+{
+ 
+    "roomId" : "cm2lzwks50007sozxlo8qb2ds"
+}
