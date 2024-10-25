@@ -1,5 +1,8 @@
 # Application de Réservation de Réunions (BookIt)
-![Copie de Top 10 des mythes Dark web (2)](https://github.com/user-attachments/assets/8ab356f5-d35d-45f8-adcf-b2d85e5b7dab)
+
+
+[![Regarder le tutoriel sur YouTube](https://img.youtube.com/vi/_ICz8Tj3fzU/0.jpg)](https://youtu.be/_ICz8Tj3fzU)
+
 
 Ce projet est une application de réservation de réunions développée en fullstack avec **Next.js**, **React**, **Prisma**, et **Kinde**. Ce guide vous accompagnera dans le développement d'une application performante et moderne de gestion de réunions, incluant la planification, les réservations et la gestion des utilisateurs.
 
