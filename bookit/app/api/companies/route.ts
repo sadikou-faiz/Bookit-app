@@ -101,6 +101,20 @@ export async function DELETE (request : Request){
             data : { companyId : null}
         })
 
+        await prisma.reservation.deleteMany({
+            where: {
+                room: {
+                    companyId :id
+                }
+            }
+        })
+
+        await prisma.room.deleteMany({
+            where: {
+                companyId:id,
+            }
+        })
+
         await prisma.company.delete({
             where :{id}
         })
