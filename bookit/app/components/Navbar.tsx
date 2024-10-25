@@ -60,6 +60,10 @@ const Navbar = () => {
                         <Link href={'/dashboard'} className={`link link-hover font-extrabold ${isActive('/dashboard') ? 'text-secondary' : ''} `}>
                             Réserver
                         </Link>
+                        
+                        <Link href={'/my-reservations'} className={`link link-hover font-extrabold ${isActive('/my-reservations') ? 'text-secondary' : ''} `}>
+                            Mes réservations
+                        </Link>
 
 
                     </div>
@@ -82,6 +86,10 @@ const Navbar = () => {
                     </Link>
                     <Link href={'/dashboard'} className={`link link-hover font-extrabold ${isActive('/dashboard') ? 'text-secondary' : ''} `}>
                         Réserver
+                    </Link>
+
+                    <Link href={'/my-reservations'} className={`link link-hover font-extrabold ${isActive('/my-reservations') ? 'text-secondary' : ''} `}>
+                            Mes réservations
                     </Link>
 
                     <LogoutLink className='btn btn-secondary btn-sm  '>Déconnexion</LogoutLink>

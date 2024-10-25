@@ -36,7 +36,6 @@ export async function POST(request: Request) {
             data: {
                 name: companyName,
                 createdBy: { connect: { id: user.id } },
-                employees: { connect: { id: user.id } }
             }
         })
 

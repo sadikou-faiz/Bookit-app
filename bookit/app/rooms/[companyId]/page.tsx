@@ -197,7 +197,7 @@ const page = ({ params }: { params: { companyId: string } }) => {
                                 {rooms.length > 0 ? (
                                     rooms.map((room) => (
                                         <li key={room.id} className='flex flex-col md:flex-row md:items-center mb-5 border-base-300 border p-5 rounded-2xl w-full min-h-60'>
-                                            <Image src={room.imgUrl} alt={room.id}
+                                            <Image src={room.imgUrl ?  room.imgUrl : '/placeholder.jpg'} alt={room.id}
                                                 width={400}
                                                 height={400}
                                                 quality={100}

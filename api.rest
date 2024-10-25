@@ -87,3 +87,48 @@ Content-Type: application/json
  
     "roomId" : "cm2lzwks50007sozxlo8qb2ds"
 }
+
+
+### Créer une réservation
+POST http://localhost:3000/api/reservations
+Content-Type: application/json
+
+{
+  "email": "feedyourback@gmail.com",
+  "roomId": "cm2nb43mm0002lbam99vdkbb2",
+  "reservationDate": "25/10/2024",  
+  "timeSlots": [
+    "13:00 - 14:30",
+    "22:00 - 22:30"
+  ]
+}
+
+### Afficher les disponibilitées
+POST http://localhost:3000/api/disponibilities
+                               disponibilities
+
+{
+    "roomId": "cm2nb43mm0002lbam99vdkbb2",
+    "reservationDate": "25/10/2024"
+}
+
+
+### Récuperre les reservations dune personne
+
+GET http://localhost:3000/api/reservations?email=feedyourback@gmail.com 
+
+
+
+### supprimer une reservation
+
+DELETE http://localhost:3000/api/reservations
+Content-Type: application/json
+
+{
+  "id": "cm2oknnb8000h6y21qnzrlt9m"
+}
+
+###
+
+DELETE http://localhost:3000/api/cleanupReservations
+
