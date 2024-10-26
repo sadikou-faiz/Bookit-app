@@ -16,6 +16,6 @@ Ce projet est une application de réservation de réunions développée en fulls
 
 Pour un guide pas à pas, consultez la vidéo complète du tutoriel sur YouTube :
 
-[![Regarder la vidéo](https://img.youtube.com/vi/_ICz8Tj3fzU/maxresdefault.jpg)](https://youtu.be/_ICz8Tj3fzU)
+[![Regarder le tuto complet ](https://youtu.be/_ICz8Tj3fzU)
 
 
